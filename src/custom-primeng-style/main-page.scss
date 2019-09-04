@@ -1,0 +1,108 @@
+// Color Setting !
+
+$status-normal : #3f9c35;
+// $status-warning : #ec7a08;
+$status-warning:#ffb300;
+$status-danger : #BD081C;
+$status-shutdown : #c7c7c7;
+
+
+.bg-shutdown-status {
+background-color: $status-shutdown !important;
+}
+.bg-warning-status {
+background-color: $status-warning !important;
+}
+.bg-danger-status {
+background-color: $status-danger !important;
+}
+.bg-normal-status {
+background-color: $status-shutdown !important;
+}
+
+.font-warning-status {
+color: $status-warning;
+}
+.font-danger-status {
+color: $status-danger;
+}
+.font-normal-status {
+color: $status-normal;
+}
+.font-shutdown-status {
+color: $status-shutdown;
+}
+
+
+// FL page
+
+body .ui-panelmenu  {
+    .ui-panelmenu-header > a {
+        background-color:white !important;
+        border-color:#c8c8c8 !important;
+    }
+    .ui-panelmenu-header.ui-state-active .ui-menuitem-text {
+        color:black !important;   
+    }
+    .ui-panelmenu-header > a .ui-panelmenu-icon {
+        color:#848484 !important;
+    }
+
+    // set status by class
+    .ui-panelmenu-header {
+        .ui-menuitem-icon {
+            color: black !important;
+        }
+    }
+
+    .ui-panelmenu-content .ui-menuitem  {
+        &.status-normal .ui-menuitem-icon {
+            color:$status-normal !important;
+        }
+        &.status-warning .ui-menuitem-icon {
+            color:$status-warning !important;
+        }
+        &.status-danger .ui-menuitem-icon {
+            color:$status-danger !important;
+        }
+    }
+}
+
+// table alarm template
+body .tableAlarmLog .ui-table  {
+    .ui-table-thead tr  {
+        th {
+            color: #333333;
+            background-color: white !important;
+            border:none;
+            border-bottom: 1px solid #dddddd;
+        }
+        th:not(:last-child){
+            border-right: 1px solid #dddddd;
+        }
+    }
+
+    .ui-table-tbody tr {
+        td {
+            background-color: white !important;
+            border:none;
+            border-bottom: 1px solid #dddddd;
+
+        }
+        td:not(:last-child){
+            border-right: 1px solid #dddddd;
+        }
+    }
+}
+
+// editer box
+
+
+.editer-container {
+    height: calc(100% - 52px);
+    // background-color:green;
+    .ui-widget.ui-editor-container.ui-corner-all{
+        height: calc(100% - 48px);
+
+    }
+}
